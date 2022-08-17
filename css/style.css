@@ -47,18 +47,41 @@ table {
 	border-spacing: 0;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 body {
     background-color: rgb(0,73,253);
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 header {
     height: 100px;
 }
 
+a {
+    color: white;
+    text-decoration: none; /* no underline */
+}
+
 .image_container {
     display:flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info ul li {
+
+    padding: 20px;
+    text-align: center;
+    color: rgb(254,254,253);
+    
 }
 
 .image_container img {
