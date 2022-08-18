@@ -48,11 +48,12 @@ table {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('http://fonts.cdnfonts.com/css/made-tommy-outline');
+
 
 body {
     background-color: rgb(0,73,253);
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'MADE TOMMY', sans-serif;
 }
 
 header {
@@ -68,28 +69,48 @@ a {
     display:flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .info {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 80px;
+}
+
+.info ul {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .info ul li {
 
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     color: rgb(254,254,253);
     
 }
 
+
 .image_container img {
-    border: 0px;
+    width: 580px;
 }
 
 @media only screen and (max-width: 600px) {
     .image_container img {
         width: 280px;
+    }
+    .info {
+        padding: 30px;
+    }
+    .info ul {
+        width: 200px;
+        flex-direction: column;
+    }
+    #svg-mail {
+        width: 36px;
     }
   }
