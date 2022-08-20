@@ -53,7 +53,7 @@ table {
 
 body {
     background-color: rgb(0,73,253);
-    font-family: 'MADE TOMMY', sans-serif;
+    /* font-family: 'MADE TOMMY', sans-serif; */
 }
 
 header {
@@ -72,11 +72,24 @@ a {
     align-items: center;
 }
 
+main .content {
+    border: 0px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #FFFF;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 600;
+}
+
 .info {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 80px;
+    padding: 40px;
 }
 
 .info ul {
@@ -96,7 +109,7 @@ a {
 
 
 .image_container img {
-    width: 580px;
+    width: 480px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -104,7 +117,7 @@ a {
         width: 280px;
     }
     .info {
-        padding: 100px;
+        padding: 80px;
     }
     .info ul {
         width: 200px;
@@ -113,4 +126,9 @@ a {
     #svg-mail {
         width: 36px;
     }
+    main .content {
+        padding-top: 10px;
+        padding-bottom: 0px;
+        font-size: 14px;
+     }
   }
