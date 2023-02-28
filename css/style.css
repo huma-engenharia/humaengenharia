@@ -52,7 +52,9 @@ table {
 
 
 body {
-    background-color: rgb(0,73,253);
+    /*background-color: rgb(0,73,253);*/
+    background-color: rgb(29,27,41);
+
     /* font-family: 'MADE TOMMY', sans-serif; */
 }
 
@@ -75,12 +77,24 @@ a {
 main .content {
     border: 0px solid;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     color: #FFFF;
     display: flex;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+main .content2 {
+    border: 0px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #FFFF;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
     font-weight: 600;
 }
@@ -101,7 +115,7 @@ main .content {
 
 .info ul li {
 
-    padding: 0px;
+    padding: 20px;
     text-align: center;
     color: rgb(254,254,253);
     
@@ -113,11 +127,15 @@ main .content {
 }
 
 @media only screen and (max-width: 600px) {
+    header {
+        height: 15px;
+    }
+    
     .image_container img {
         width: 280px;
     }
     .info {
-        padding: 80px;
+        padding: 30px;
     }
     .info ul {
         width: 200px;
@@ -128,7 +146,14 @@ main .content {
     }
     main .content {
         padding-top: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+        text-align: center;
+     }
+     main .content2 {
+        padding-top: 20px;
         padding-bottom: 0px;
         font-size: 14px;
+        text-align: center;
      }
   }
