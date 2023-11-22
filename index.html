@@ -1,73 +1,1023 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Huma Engenharia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="navbar-top-fixed.css" rel="stylesheet"> -->
+
+    <!-- CSS stylesheet -->
+    <link href="assets\css\style.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>HUMA - Engenharia e Consultoria</title>
 </head>
-<body>
+
+<body onscroll="activeSection()">
+
+    <div id="all-content">
+    
+    <!-- ************************************ -->
+    <!-- HEADER -->
+    <!-- ************************************ -->
     <header>
-
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top p-1">
+            <div class="container-fluid">
+                <a class="navbar-brand ps-3" href="#">
+                    <img src="assets/img/logo-transparent.png" style="width: 9.5rem;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <div class="teste">
+                        <p id="activeSection"></p>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse pe-5" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#solucoes">Soluções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projetos">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
-        <div class="image_container">
-            <img src="images/logo-dark.png">
-        </div>
-        <div class="content">
-            <p>Meio Ambiente e Segurança do Trabalho</p>
-        </div>
-        <div class="content2">
-            <p>Estamos atualizando nosso site para melhor atendê-lo! </p>
-        </div>
-        <div class="content2">
-            <p>Fale conosco através dos nossos canais de atendimento.</p>
-        </div>
-        <div class="info">
-            <ul>
 
-                <li>
-                    <a href="https://wa.me/+5511958694909" target="_blank">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-                      </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/company/huma-engenharia-e-consultoria">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                          </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/humaengenhariaeconsultoria">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                          </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/profile.php?id=100088823863131">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                          </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:contato@humaengenharia.com">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
-                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
-                          </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </main>
-    <footer>
+    <!-- BEGIN: Scroll spy -->
+    <div id="scrollSpy" data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="0" class="scrollspy-example" tabindex="0">
 
-    </footer>
+    <!-- ************************************ -->
+    <!-- HOME -->
+    <!-- ************************************ -->
+    
+    <section id="home">
+        <div class="container-fluid"
+            style="background-image: url(assets/img/background-pb.png); background-size: cover; background-repeat: no-repeat; background-position-x: 40%;">
+            <div class="vh-100 d-flex container-fluid">
+                <div class="txtQuemSomos w-50 align-self-center text-light fs-1">
+                    <p>Somos a HUMA ENGENHARIA E CONSULTORIA, empresa atuante nas áreas de Meio Ambiente e
+                        Segurança do Trabalho, com sede em São Paulo e atendimento em todo o território nacional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************ -->
+    <!-- SOLUCOES -->
+    <!-- ************************************ -->
+    <section id="solucoes">
+        <div id="solucoes-container" class="vh-100 container-fluid">
+            <div id="carouselExampleControls" class="carousel slide d-none d-sm-block" data-interval="false">
+                <div class="nossaMissao container-fluid">
+                    <span>"Nossa missão é proporcionar às empresas e às pessoas um ambiente seguro, agradável e com
+                        qualidade, onde a cultura de segurança passe a ser objeto que agregue valor aos
+                        negócios."</span>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/PGR.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">PGR</h5>
+                                    <ul>
+                                        <li class="card-text">Atendimento à Norma Regulamentadora NR-1;</li>
+                                        <li class="card-text">Elaboração de Inventário de Riscos e Plano de Ação;</li>
+                                        <li class="card-text">Indicação de Avaliações e Medidas de Controle adequadas para cada atividade.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/LTCAT.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">LTCAT</h5>
+                                    <ul>
+                                        <li class="card-text">Identificação de agentes nocivos prejudiciais aos seus trabalhadores;</li>
+                                        <li class="card-text">Conclusão quanto ao direito de aposentadoria especial;</li>
+                                        <li class="card-text">Atendimento às exigências do INSS e lançamento no eSocial.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/ergonomia.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Ergonomia</h5>
+                                    <ul>
+                                        <li class="card-text">Atendimento à NR-17 e Inventário de Riscos da NR-1;</li>
+                                        <li class="card-text">Proporcionam melhorias no ambiente de trabalho;</li>
+                                        <li class="card-text">Prevenção de Doenças e Promoção de bem-estar aos trabalhadores.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/corpo-de-bombeiros.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Corpo de Bombeiros</h5>
+                                    <ul>
+                                        <li class="card-text">Realização de AVCB (Auto de Vistoria do Corpo de Bombeiros) e CLCB (Certificado de Licença do Corpo de Bombeiros);</li>
+                                        <li class="card-text">Atendimento as Instruções Técnicas do Corpo de Bombeiros;</li>
+                                        <li class="card-text">Projetos de prevenção e combate a incêndio.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/laudos-tecnicos.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Laudos Técnicos</h5>
+                                    <ul>
+                                        <li class="card-text">Insalubridade (NR-15) e Periculosidade (NR-16);</li>
+                                        <li class="card-text">Avaliação e Controle de Exposições Ocupacionais (NR-9);</li>
+                                        <li class="card-text">Laudos de Agentes Químicos (Higiene Ocupacional).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/licenciamento-ambiental.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Licenciamento Ambiental</h5>
+                                    <ul>
+                                        <li class="card-text">Licenciamento Ambiental (LP; LI; LO; RLO);</li>
+                                        <li class="card-text">Atendimento a CETESB (SP) e Municípios (CONSEMA nº 01/2018);</li>
+                                        <li class="card-text">CADRI e SIGOR (MTR) – Produtos Perigosos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/estudos-ambientais.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Estudos Ambientais</h5>
+                                    <ul>
+                                        <li class="card-text">Diagnóstico Ambiental;</li>
+                                        <li class="card-text">Estudos de Aspectos e Impactos Ambientais;</li>
+                                        <li class="card-text">Levantamentos de anterioridade e para atendimento legal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/regularizacoes.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Regularizações</h5>
+                                    <ul>
+                                        <li class="card-text">Secretarias Ambientais (Manifestos, Certidões, Informes Técnicos);</li>
+                                        <li class="card-text">Secretarias de Obras e Infraestrutura (Uso e Ocupação do Solo, Zoneamento);</li>
+                                        <li class="card-text">CAR – Cadastro Ambiental Rural.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/avaliacoes-ambientais.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Avaliações ambientais</h5>
+                                    <ul>
+                                        <li class="card-text">Avaliação de Impacto de Vizinhança;</li>
+                                        <li class="card-text">Laudo para conforto ambiental (ruído e vibração);</li>
+                                        <li class="card-text">Análises Ambientais (parceria com laboratórios certificados).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- ************************************ -->
+            <!-- **** Carousel small screens *** -->
+            <!-- ************************************ -->
+            <div id="carouselExampleControlsSmallScreen" class="carousel slide d-sm-none" data-interval="false">
+                <div class="nossaMissao container-fluid">
+                    <span>"Nossa missão é proporcionar às empresas e às pessoas um ambiente seguro, agradável e com
+                        qualidade, onde a cultura de segurança passe a ser objeto que agregue valor aos
+                        negócios."</span>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/PGR.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">PGR</h5>
+                                    <ul>
+                                        <li class="card-text">Atendimento à Norma Regulamentadora NR-1;</li>
+                                        <li class="card-text">Elaboração de Inventário de Riscos e Plano de Ação;</li>
+                                        <li class="card-text">Indicação de Avaliações e Medidas de Controle adequadas para cada atividade.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/LTCAT.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">LTCAT</h5>
+                                    <ul>
+                                        <li class="card-text">Identificação de agentes nocivos prejudiciais aos seus trabalhadores;</li>
+                                        <li class="card-text">Conclusão quanto ao direito de aposentadoria especial;</li>
+                                        <li class="card-text">Atendimento às exigências do INSS e lançamento no eSocial.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/ergonomia.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Ergonomia</h5>
+                                    <ul>
+                                        <li class="card-text">Atendimento à NR-17 e Inventário de Riscos da NR-1;</li>
+                                        <li class="card-text">Proporcionam melhorias no ambiente de trabalho;</li>
+                                        <li class="card-text">Prevenção de Doenças e Promoção de bem-estar aos trabalhadores.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/corpo-de-bombeiros.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Corpo de Bombeiros</h5>
+                                    <ul>
+                                        <li class="card-text">Realização de AVCB (Auto de Vistoria do Corpo de Bombeiros) e CLCB (Certificado de Licença do Corpo de Bombeiros);</li>
+                                        <li class="card-text">Atendimento as Instruções Técnicas do Corpo de Bombeiros;</li>
+                                        <li class="card-text">Projetos de prevenção e combate a incêndio.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/laudos-tecnicos.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Laudos Técnicos</h5>
+                                    <ul>
+                                        <li class="card-text">Insalubridade (NR-15) e Periculosidade (NR-16);</li>
+                                        <li class="card-text">Avaliação e Controle de Exposições Ocupacionais (NR-9);</li>
+                                        <li class="card-text">Laudos de Agentes Químicos (Higiene Ocupacional).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/licenciamento-ambiental.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Licenciamento Ambiental</h5>
+                                    <ul>
+                                        <li class="card-text">Licenciamento Ambiental (LP; LI; LO; RLO);</li>
+                                        <li class="card-text">Atendimento a CETESB (SP) e Municípios (CONSEMA nº 01/2018);</li>
+                                        <li class="card-text">CADRI e SIGOR (MTR) – Produtos Perigosos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/estudos-ambientais.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Estudos Ambientais</h5>
+                                    <ul>
+                                        <li class="card-text">Diagnóstico Ambiental;</li>
+                                        <li class="card-text">Estudos de Aspectos e Impactos Ambientais;</li>
+                                        <li class="card-text">Levantamentos de anterioridade e para atendimento legal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/regularizacoes.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Regularizações</h5>
+                                    <ul>
+                                        <li class="card-text">Secretarias Ambientais (Manifestos, Certidões, Informes Técnicos);</li>
+                                        <li class="card-text">Secretarias de Obras e Infraestrutura (Uso e Ocupação do Solo, Zoneamento);</li>
+                                        <li class="card-text">CAR – Cadastro Ambiental Rural.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cards-wrapper">
+                            <div class="card card-solucoes">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/solucoes/avaliacoes-ambientais.jpg" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Avaliações ambientais</h5>
+                                    <ul>
+                                        <li class="card-text">Avaliação de Impacto de Vizinhança;</li>
+                                        <li class="card-text">Laudo para conforto ambiental (ruído e vibração);</li>
+                                        <li class="card-text">Análises Ambientais (parceria com laboratórios certificados).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsSmallScreen"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsSmallScreen"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************ -->
+    <!-- PROJETOS -->
+    <!-- ************************************ -->
+    <section id="projetos" style="background-color: white; ">
+        <div style="height: 70px; "></div>
+            <div class="d-flex flex-column container-fluid" id="section-projetos">
+                <div class="d-flex">
+                    <p class="vw-100 pt-2 pb-2 fs-1 text-dark">Por onde já passamos</p>
+                </div>
+        
+                <div id="logos" class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-2 align-items-center">
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-femsa-coca-cola.png" class="card-img-top" alt="FEMSA - Coca-Cola">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-ipiranga.png" class="card-img-top" alt="Ipiranga">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-petrobras.png" class="card-img-top" alt="Petrobras">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-kinross.png" class="card-img-top" alt="Kinross">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-cnpem.png" class="card-img-top" alt="CNPEM">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-scania.png" class="card-img-top" alt="SCANIA">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-cacau-show.png" class="card-img-top" alt="Cacau Show">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-sodexo.png" class="card-img-top" alt="Sodexo">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-hcor.png" class="card-img-top" alt="HCor">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-air-liquide.png" class="card-img-top" alt="Air Liquide">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-ecolab.png" class="card-img-top" alt="Ecolab">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-agilent.png" class="card-img-top" alt="Agilent">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-museu-afro-brasil-2.png" class="card-img-top" alt="Museu Afro Brasil">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-klabin.png" class="card-img-top" alt="Klabin">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-cabot.png" class="card-img-top" alt="Cabot">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-vitopel.png" class="card-img-top" alt="Vitopel">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-zero57.png" class="card-img-top" alt="Zero57">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-citibank.png" class="card-img-top" alt="Citibank">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-sao-luiz.png" class="card-img-top" alt="São Luiz">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-ibge.png" class="card-img-top" alt="IBGE">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-afonso-franca-engenharia.png" class="card-img-top" alt="Afonso França Engenharia">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-sp-engenharia.png" class="card-img-top" alt="SP Engenharia">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-shopping-higienopolis.png" class="card-img-top" alt="Shopping Patio Higienópolis">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-pinacoteca.png" class="card-img-top" alt="Pinacoteca">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col card-logos-none">
+                        <div class="card card-logos-empty">
+                            <div class="">
+                                <img src="" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-start-rope.png" class="card-img-top" alt="Start Rope">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-logos">
+                            <div class="">
+                                <img src="assets/img/logos/v2/logo-aron-tecnica.png" class="card-img-top" alt="Aron Técnica">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col card-logos-none">
+                        <div class="card card-logos-empty">
+                            <div class="">
+                                <img src="" class="card-img-top" alt="">
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </div>
+        
+        
+    </section>
+
+    <!-- ************************************ -->
+    <!-- CONTATO -->
+    <!-- ************************************ -->
+    <section id="contato" class="p-0 container-fluid">
+        
+        <div class="d-flex container-fluid info p-0 pt-4 align-items-center ">
+            <!-- Homolog -->
+            <!-- form action="https://formsubmit.co/330251a6f5d7581a37cc05c2f46606e9" method="POST" class="mt-3 pt-5" style="width: 30%;" -->
+            <!-- Prod -->
+            <form action="https://formsubmit.co/9e980e1593a0b507cda962cde0004fa3" method="POST" class="mt-3 pt-5" style="width: 30%;">
+                <legend style="color: white;">Fale conosco!</legend>
+                <input type="text" class="form-control mb-3" id="floatingInput" placeholder="Nome" name="name" required>
+                <input type="email" class="form-control mb-3" id="floatingInput" placeholder="Email" name="email" required>
+                <textarea class="form-control mb-3" placeholder="Deixe sua mensagem" name="message" id="floatingTextarea2" required style="height: 100px; resize: none;"></textarea>
+                <div class="form-check m-0">
+                    <input type="checkbox" class="form-check-input" id="checkbox-consentimento" required>
+                    <label class="form-check-label" for="checkbox-consentimento">
+                        <p style="color: white; font-size: smaller;"> Concordo com a 
+                            <a target="_blank"  class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Política de Privacidade
+                            </a>
+                        </p>
+                    </label>
+                  </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">POLÍTICA DE PRIVACIDADE <span class="d-none"> da HUMA ENGENHARIA E CONSULTORIA LTDA</span></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Na 
+                                <span class="fw-bold">HUMA ENGENHARIA E CONSULTORIA LTDA</span>, privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários e clientes. Por isso, esta Política de Privacidade estabelece como é feita a coleta, uso e transferência de informações de clientes ou outras pessoas que acessam, usam ou interagem com os recursos de nosso site. 
+                            </p>
+                            <p>
+                                Ao utilizar nossos serviços, você entende que coletaremos e usaremos suas informações pessoais nas formas descritas nesta Política, sob as normas da Constituição Federal de 1988 (art. 5º, LXXIX; e o art. 22º, XXX – incluídos pela EC 115/2022), das normas de Proteção de Dados (LGPD, Lei Federal 13.709/2018), das disposições consumeristas da Lei Federal 8078/1990 e as demais normas do ordenamento jurídico brasileiro aplicáveis. 
+                            </p>
+                            <p>
+                                Dessa forma, a <span class="fw-bold">HUMA ENGENHARIA E CONSULTORIA LTDA</span>, doravante denominada simplesmente como <span class="fw-bold">“HUMA ENGENHARIA”</span>, inscrita no CNPJ/MF sob o nº <span class="fw-bold">45.880.649/0001-82</span>, no papel de Controladora de Dados, obriga-se ao disposto na presente Política de Privacidade. 
+                            </p>   
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">1. Quais dados coletamos sobre você e para qual finalidade? </span>
+                            <br><br>
+                            Nosso site coleta e utiliza alguns dados pessoais seus, de forma a viabilizar a prestação de serviços e aprimorar a experiência de uso. 
+                            </p>
+                            <p>
+
+                            <span class="fw-bold fst-italic">1.1. Dados pessoais fornecidos pelo titular </span>
+                            <br><br>
+                            a) Nome: Coletamos seu nome para personalizar a comunicação e interação com nossos serviços. 
+                            <br><br>
+                            b) Endereço de E-mail: Coletamos seu endereço de e-mail para enviar informações importantes, atualizações e notificações relacionadas aos nossos produtos e serviços. 
+                            </p>
+                            
+                            <p>
+                                <span class="fw-bold fst-italic">
+                                    2. Como coletamos os seus dados? 
+                                </span>
+                            <br><br>
+                            Nesse sentido, a coleta dos seus dados pessoais ocorre da seguinte forma: 
+                            <br><br>
+                            a) Nome: Fornecimento pelo usuário. 
+                            <br><br>
+                            b) Endereço de E-mail: Fornecimento pelo usuário. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            2.1. Consentimento 
+                            </span>
+                            <br><br>
+                            É a partir do seu consentimento que tratamos os seus dados pessoais. O consentimento é a manifestação livre, informada e inequívoca pela qual você autoriza a <span class="fw-bold">HUMA ENGENHARIA</span> a tratar seus dados. 
+                            <br><br>
+                            Assim, em consonância com a Lei Geral de Proteção de Dados, seus dados só serão coletados, tratados e armazenados mediante prévio e expresso consentimento.  
+                            <br><br>
+                            O seu consentimento será obtido de forma específica para as finalidades acima descritas, evidenciando o compromisso de transparência e boa-fé da <span class="fw-bold">HUMA ENGENHARIA</span> para com seus usuários e clientes, seguindo as regulações legislativas pertinentes. 
+                            <br><br>
+                            Ao utilizar os serviços da <span class="fw-bold">HUMA ENGENHARIA</span> e fornecer seus dados pessoais, você está ciente e consentindo com as disposições desta Política de Privacidade, além de conhecer seus direitos e como exercê-los. 
+                            <br><br>
+                            A qualquer tempo e sem nenhum custo, você poderá revogar seu consentimento. 
+                            <br><br>
+                            É importante destacar que a revogação do consentimento para o tratamento dos dados pode implicar a impossibilidade da performance ou entrega adequada de alguma funcionalidade do site ou de serviços que dependa desta operação. Tais consequências serão informadas previamente. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            3. Quais são os seus direitos? 
+                            </span>
+                            <br><br>
+                            A <span class="fw-bold">HUMA ENGENHARIA</span> assegura a seus usuários e clientes seus direitos de titular previstos no artigo 18 da Lei Geral de Proteção de Dados. Dessa forma, você pode, de maneira gratuita e a qualquer tempo: 
+                            <br><br>
+                            Confirmar a existência de tratamento de dados, de maneira simplificada ou em formato claro e completo. 
+                            <br><br>
+                            Acessar seus dados, podendo solicitá-los em uma cópia legível sob forma impressa ou por meio eletrônico, seguro e idôneo. 
+                            <br><br>
+                            Corrigir seus dados, ao solicitar a edição, correção ou atualização destes. 
+                            <br><br>
+                            Limitar seus dados quando desnecessários, excessivos ou tratados em desconformidade com a legislação através da anonimização, bloqueio ou eliminação. 
+                            <br><br>
+                            Solicitar a portabilidade de seus dados, através de um relatório de dados cadastrais que a <span class="fw-bold">HUMA ENGENHARIA</span> trata a seu respeito. 
+                            <br><br>
+                            Eliminar seus dados tratados a partir de seu consentimento, exceto nos casos previstos em lei. 
+                            <br><br>
+                            Revogar seu consentimento, desautorizando o tratamento de seus dados. 
+                            <br><br>
+                            Informar-se sobre a possibilidade de não fornecer seu consentimento e sobre as consequências da negativa. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            4. Como você pode exercer seus direitos de titular? 
+                            </span>
+                            <br><br>
+                            Para exercer seus direitos de titular, você deve entrar em contato com a <span class="fw-bold">HUMA ENGENHARIA</span> através dos seguintes meios disponíveis: 
+                            <br><br>
+                            lgdp@humaengenharia.com 
+                            <br><br>
+                            De forma a garantir a sua correta identificação como titular dos dados pessoais objeto da solicitação, é possível que solicitemos documentos ou demais informações que possam comprovar sua identidade. Nessa hipótese, você será informado previamente. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            5. Como e por quanto tempo seus dados serão armazenados? 
+                            </span>
+                            <br><br>
+                            Seus dados pessoais coletados pela <span class="fw-bold">HUMA ENGENHARIA</span> serão utilizados e armazenados durante o tempo necessário para a prestação do serviço ou para que as finalidades elencadas na presente Política de Privacidade sejam atingidas, considerando os direitos dos titulares dos dados e dos controladores. 
+                            <br><br>
+                            De modo geral, seus dados serão mantidos enquanto a relação contratual entre você e a <span class="fw-bold">HUMA ENGENHARIA</span> perdurar. Findado o período de armazenamento dos dados pessoais, estes serão excluídos de nossas bases de dados ou anonimizados, ressalvadas as hipóteses legalmente previstas no artigo 16 da Lei Geral de Proteção de Dados, a saber: 
+                            <br><br>
+                            I. cumprimento de obrigação legal ou regulatória pelo controlador; 
+                            <br><br>
+                            II. estudo por órgão de pesquisa, garantida, sempre que possível, a anonimização dos dados pessoais; 
+                            <br><br>
+                            III. transferência a terceiro, desde que respeitados os requisitos de tratamento de dados dispostos nesta Lei; ou 
+                            <br><br>
+                            IV. uso exclusivo do controlador, vedado seu acesso por terceiro, e desde que anonimizados os dados. 
+                            <br><br>
+                            Isto é, informações pessoais sobre você que sejam imprescindíveis para o cumprimento de determinações legais, judiciais e administrativas e/ou para o exercício do direito de defesa em processos judiciais e administrativos serão mantidas, a despeito da exclusão dos demais dados.  
+                            <br><br>
+                            O armazenamento de dados coletados pela <span class="fw-bold">HUMA ENGENHARIA</span> reflete o nosso compromisso com a segurança e privacidade dos seus dados. Empregamos medidas e soluções técnicas de proteção aptas a garantir a confidencialidade, integridade e inviolabilidade dos seus dados. Além disso, também contamos com medidas de segurança apropriadas aos riscos e com controle de acesso às informações armazenadas. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            6. O que fazemos para manter seus dados seguros? 
+                            </span>                                
+                            <br><br>
+                            Para mantermos suas informações pessoais seguras, usamos ferramentas físicas, eletrônicas e gerenciais orientadas para a proteção da sua privacidade. 
+                            <br><br>
+                            Aplicamos essas ferramentas levando em consideração a natureza dos dados pessoais coletados, o contexto e a finalidade do tratamento e os riscos que eventuais violações gerariam para os direitos e liberdades do titular dos dados coletados e tratados. 
+                            <br><br>
+                            Entre as medidas que adotamos, destacamos as seguintes: 
+                            <br><br>
+                            a) Apenas pessoas autorizadas têm acesso a seus dados pessoais 
+                            <br><br>
+                            b) O acesso a seus dados pessoais é feito somente após o compromisso de confidencialidade 
+                            <br><br>
+                            c) Seus dados pessoais são armazenados em ambiente seguro e idôneo. 
+                            <br><br>
+                            A <span class="fw-bold">HUMA ENGENHARIA</span> se compromete a adotar as melhores posturas para evitar incidentes de segurança. Contudo, é necessário destacar que nenhuma página virtual é inteiramente segura e livre de riscos. É possível que, apesar de todos os nossos protocolos de segurança, problemas de culpa exclusivamente de terceiros ocorram, como ataques cibernéticos de hackers, ou também em decorrência da negligência ou imprudência do próprio usuário/cliente. 
+                            <br><br>
+                            Em caso de incidentes de segurança que possa gerar risco ou dano relevante para você ou qualquer um de nossos usuários e clientes, comunicaremos aos afetados e a Autoridade Nacional de Proteção de Dados sobre o ocorrido, em consonância com as disposições da Lei Geral de Proteção de Dados. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            7. Com quem seus dados podem ser compartilhados? 
+                            </span>
+                            <br><br>
+                            Tendo em vista a preservação de sua privacidade, a <span class="fw-bold">HUMA ENGENHARIA</span> não compartilhará seus dados pessoais com nenhum terceiro não autorizado.  
+                            <br><br>
+                            Apenas nas seguintes hipóteses seus dados poderão ser compartilhados: 
+                            <br><br>
+                            I. Determinação legal, requerimento, requisição ou ordem judicial, com autoridades judiciais, administrativas ou governamentais competentes. 
+                            <br><br>
+                            II. Caso de movimentações societárias, como fusão, aquisição e incorporação, de forma automática 
+                            <br><br>
+                            III. Proteção dos direitos da <span class="fw-bold">HUMA ENGENHARIA</span> em qualquer tipo de conflito, inclusive os de teor judicial. 
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            8. Alteração desta Política de Privacidade 
+                            </span>
+                            <br><br>
+                            A atual versão da Política de Privacidade foi formulada e atualizada pela última vez em: 1º de outubro de 2023. 
+                            <br><br>
+                            Reservamos o direito de modificar essa Política de Privacidade a qualquer tempo, principalmente em função da adequação a eventuais alterações feitas em nosso site ou em âmbito legislativo. Recomendamos que você a revise com frequência. 
+                            <br><br>
+                            Eventuais alterações entrarão em vigor a partir de sua publicação em nosso site e sempre lhe notificaremos acerca das mudanças ocorridas. 
+                            <br><br>
+                            Ao utilizar nossos serviços e fornecer seus dados pessoais após tais modificações, você as consente.  
+                            </p>
+                            
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            9. Responsabilidade 
+                            </span>
+                            <br><br>
+                            A <span class="fw-bold">HUMA ENGENHARIA</span> prevê a responsabilidade dos agentes que atuam nos processos de tratamento de dados, em conformidade com os artigos 42 ao 45 da Lei Geral de Proteção de Dados. 
+                            <br><br>
+                            Nos comprometemos em manter esta Política de Privacidade atualizada, observando suas disposições e zelando por seu cumprimento. 
+                            <br><br>
+                            Além disso, também assumimos o compromisso de buscar condições técnicas e organizacionais seguramente aptas a proteger todo o processo de tratamento de dados. 
+                            <br><br>
+                            Caso a Autoridade Nacional de Proteção de Dados exija a adoção de providências em relação ao tratamento de dados realizado pela HUMA ENGENHARIA, comprometemo-nos a segui-las.  
+                            </p>
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            9.1 Isenção de responsabilidade 
+                            </span>
+                            <br><br>
+                            Conforme mencionado no Item 6, embora adotemos elevados padrões de segurança a fim de evitar incidentes, não há nenhuma página virtual inteiramente livre de riscos. Nesse sentido, a <span class="fw-bold">HUMA ENGENHARIA</span> não se responsabiliza por: 
+                            <br><br>
+                            I. Quaisquer consequências decorrentes da negligência, imprudência ou imperícia dos usuários em relação a seus dados individuais. Garantimos e nos responsabilizamos apenas pela segurança dos processos de tratamento de dados e do cumprimento das finalidades descritas no presente instrumento. 
+                            <br><br>
+                            Destacamos que a responsabilidade em relação à confidencialidade dos dados de acesso é do usuário. 
+                            <br><br>
+                            II. Ações maliciosas de terceiros, como ataques de hackers, exceto se comprovada conduta culposa ou deliberada da HUMA ENGENHARIA. 
+                            <br><br>
+                            Destacamos que em caso de incidentes de segurança que possam gerar risco ou dano relevante para você ou qualquer um de nossos usuários ou clientes, comunicaremos aos afetados e a Autoridade Nacional de Proteção de Dados sobre o ocorrido e cumpriremos as providências necessárias. 
+                            <br><br>
+                            III. Inveracidade das informações inseridas pelo usuário/cliente nos registros necessários para a utilização dos serviços da HUMA ENGENHARIA. 
+                            <br><br>
+                            Quaisquer consequências decorrentes de informações falsas ou inseridas de má-fé são de inteiramente responsabilidade do usuário/cliente. 
+                            </p>
+
+                            <p>
+                            <span class="fw-bold fst-italic">
+                            10. Encarregado de Proteção de Dados 
+                            </span>
+                            <br><br>
+                            A <span class="fw-bold">HUMA ENGENHARIA</span> disponibiliza os seguintes meios para que você possa entrar em contato conosco para exercer seus direitos de titular: e-mail. 
+                            <br><br>
+                            Caso tenha dúvidas sobre esta Política de Privacidade ou sobre os dados pessoais que tratamos, você pode entrar em contato através dos seguintes canais: 
+                            <br><br>
+                            lgpd@humaengenharia.com
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Alterar em prod -->
+                <input type="hidden" name="_next" value="https://bcsmacena.github.io/huma-landpage/">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="g-recaptcha p-0 mb-3" data-sitekey="6LcjfvYmAAAAAAPCn4-meuFCd45Bol7631g1ieoR" data-callback="recaptchaCallback"></div>
+                
+                
+                <div class="d-grid gap-2 mb-3">
+                    <button type="submit" class="btn btn-primary" id="btnSubmit" disabled>Enviar</button>
+                  </div>
+           </form>
+        </div>
+        
+        <div class="d-flex container-fluid flex-column justify-content-end p-0">
+            <div class="d-flex info p-0 align-items-center">
+                    
+                    <ul class="p-0 m-0">
+                        <li>
+                            <a class="nav-link p-0" href="#">
+                                <img src="assets/img/coruja-dark-blue.png" style="width: 1.5rem;">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/+5511958694909" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                            </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/huma-engenharia-e-consultoria">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/humaengenhariaeconsultoria">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=100088823863131">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contato@humaengenharia.com?subject=Site%20-%20Fale%20Conosco&body=Quero%20receber%20mais%20informações!%0A%0ANome:%0ATelefone:">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                    <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+                                    <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    
+            </div>
+            <div class="d-flex justify-content-center align-items-center p-0" style="color: white; text-align: center;">
+                Huma Engenharia e Consultoria Ltda
+            </div>
+            <div class="d-flex justify-content-center align-items-center p-0 pb-2 mb-5" style="color: white; text-align: center;">
+                
+            </div>
+        </div>
+    </section>
+    
+    </div>
+    <!-- END: Scroll spy -->
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="assets\js\script.js"></script>
 </body>
+
 </html>
