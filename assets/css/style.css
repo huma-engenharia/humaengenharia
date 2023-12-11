@@ -24,8 +24,24 @@
         width: 7rem!important;
     }
     p {
-        font-size: calc(0.7rem + 1.0vw) !important;
+        font-size: calc(0.7rem + 1.0vw)!important;
     }
+    #diferenciais {
+        margin-top: 20px!important;
+    }
+    .text-diferenciais {
+        margin-top: 0px;
+    }
+    .text-diferenciais p {
+        font-size: calc(0.3rem + 1.0vw)!important;
+    }
+    .text-diferenciais h1 {
+        font-size: calc(0.7rem + 1.0vw)!important;
+    }
+    .text-projetos p {
+        font-size: calc(0.7rem + 1.0vw)!important;
+    }
+    
     .txtQuemSomos {
         top: 65%;
         width: 45%!important;
@@ -69,6 +85,9 @@
     .txtQuemSomos p {
         font-size: calc(1.125rem + 1.2vw);        
     }
+    .text-diferenciais p {
+        font-size: calc(1.125rem + 1.2vw)!important;        
+    }
     .navbar-toggler {
         margin-top: -10px;
     }
@@ -87,11 +106,17 @@
     .txtQuemSomos p {
         font-size: calc(1.125rem + 1vw);        
     }
+    .text-diferenciais p {
+        font-size: calc(1.125rem + 1vw)!important;        
+    }
 }
 
 @media all and (max-width: 350px) {
     .txtQuemSomos p {
         font-size: calc(1.125rem + 0.8vw);        
+    }
+    .text-diferenciais p {
+        font-size: calc(1.125rem + 0.8vw)!important;        
     }
 }
 
@@ -190,6 +215,9 @@
     #logos {
         width: 65vw!important;
         align-self: center!important;
+    }
+    .img-diferenciais {
+        display: none;
     }
 }
 
@@ -354,6 +382,15 @@
         margin: 0.5em 3em;
         box-shadow: 0px 1px ;
     }
+
+    .background-diferenciais {
+        display: none;
+    }
+    .text-diferenciais {
+        width: 100dvw!important;
+        padding: 15px!important;
+
+    }
 }
 
 .image-wrapper img {
@@ -396,7 +433,10 @@ section#contato {
     flex-wrap: wrap;
 }
 
-
+section#diferenciais {
+    height: 100vh;
+    background-color: rgb(29,27,41);
+}
 
 .info {
     display: flex;
